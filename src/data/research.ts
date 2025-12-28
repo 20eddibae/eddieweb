@@ -13,8 +13,8 @@ export const research: Research[] = [
     id: 'hassanpour-lab',
     title: 'Hassanpour Lab (Center for Precision Health & Artificial Intelligence)',
     role: 'Research Assistant',
-    dateRange: '3/2025 - 11/2025',
-    description: 'Deep learning pipelines for gigapath-level analysis.',
+    dateRange: '5/2025-11/2025',
+    description: 'Developed deep learning pipelines for gigapath transformer fine-tuning',
     technologies: ['Python', 'PyTorch', 'MONAI', 'Deep Learning'],
   },
   {
@@ -22,7 +22,7 @@ export const research: Research[] = [
     title: 'USC Radiomics Lab',
     role: 'Research Assistant',
     dateRange: '6/2025 - 9/2025',
-    description: 'Automated preprocessing and vision-language CNNs.',
+    description: 'Developed 3D algorithms for C-Index calculation and designed U-net vision-language architecture.',
     technologies: ['Python', 'PyTorch', 'MONAI', '3D CNNs'],
   },
   {
@@ -30,7 +30,7 @@ export const research: Research[] = [
     title: 'UCI School of Medicine',
     role: 'Co-author',
     dateRange: '2024',
-    description: 'Co-authored research on pediatric migraine management disparities. Published in 2024 Western Medical Research Conference',
+    description: 'Co-authored paper on pediatric migraine management. Published at 2024 Western Medical Research Conference',
     technologies: ['Meta-analysis', 'Literature Review'],
     link: 'https://journals.sagepub.com/doi/epub/10.1177/10815589231218540',
   },

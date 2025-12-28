@@ -49,7 +49,7 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({
         <p>{dateRange}</p>
       </div>
 
-      <p className="text-xs text-text-secondary leading-tight mb-2 flex-grow line-clamp-3 overflow-hidden">
+      <p className="text-xs text-text-secondary leading-tight mb-2 flex-grow line-clamp-4 overflow-hidden">
         {description}
       </p>
 
