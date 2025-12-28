@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 interface ProjectCardProps {
   title: string;
@@ -18,9 +18,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   isProduction
 }) => {
   const url = liveUrl || githubUrl;
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="group bg-white border border-border rounded-xl p-3 transition-all duration-200 hover:shadow-lg hover:-translate-y-1 flex flex-col aspect-square overflow-hidden h-full w-full">
+    <div 
+      className="group bg-white border border-border rounded-xl p-3 transition-all duration-200 hover:shadow-lg hover:-translate-y-1 flex flex-col h-full w-full"
+      style={{ aspectRatio: isHovered ? 'auto' : '1 / 1' }}
+    >
       <div className="flex items-center gap-1 mb-1">
         {url ? (
           <a
@@ -40,9 +44,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         )}
       </div>
 
-      <p className="text-xs text-text-secondary leading-tight mb-2 flex-grow line-clamp-3 overflow-hidden">
-        {description}
-      </p>
+      <div 
+        className="mb-2 flex-grow"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <p className={`text-xs text-text-secondary leading-tight ${isHovered ? '' : 'line-clamp-3 overflow-hidden'}`}>
+          {description}
+        </p>
+      </div>
 
       <div className="flex flex-wrap gap-1 mt-auto">
         {technologies.map((tech) => (

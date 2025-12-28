@@ -6,7 +6,7 @@ export const research: Research[] = [
     title: 'Matrix CoLab',
     role: 'Research Assistant',
     dateRange: '7/2025 - Present',
-    description: 'Statistical modeling of socioeconomic indicators.',
+    description: 'Statistical modeling of socioeconomic indicators. Current machine learning research on blue book analysis',
     technologies: ['R', 'Statistical Modeling'],
   },
   {
