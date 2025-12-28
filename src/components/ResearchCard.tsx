@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 interface ResearchCardProps {
   title: string;
@@ -24,11 +24,22 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({
 }) => {
   const url = link || pdfUrl || githubUrl;
   const [isHovered, setIsHovered] = useState(false);
+  const [isTruncated, setIsTruncated] = useState(false);
+  const descriptionRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    if (descriptionRef.current) {
+      const isTextTruncated = descriptionRef.current.scrollHeight > descriptionRef.current.clientHeight;
+      setIsTruncated(isTextTruncated);
+    }
+  }, [description]);
 
   return (
     <div 
-      className="group bg-white border border-border rounded-xl p-3 transition-all duration-200 hover:shadow-lg hover:-translate-y-1 flex flex-col h-full w-full"
-      style={{ aspectRatio: isHovered ? 'auto' : '1 / 1' }}
+      className={`group bg-white border border-border rounded-xl p-3 transition-all duration-200 hover:shadow-lg hover:-translate-y-1 flex flex-col aspect-square h-full w-full ${
+        isHovered && isTruncated ? 'z-50 bg-gray-50 shadow-2xl overflow-visible' : 'z-0 overflow-hidden'
+      }`}
+      style={{ position: 'relative' }}
     >
       <div className="flex items-center gap-2 mb-1">
         {url ? (
@@ -55,10 +66,15 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({
 
       <div 
         className="mb-2 flex-grow"
-        onMouseEnter={() => setIsHovered(true)}
+        onMouseEnter={() => isTruncated && setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <p className={`text-xs text-text-secondary leading-tight ${isHovered ? '' : 'line-clamp-4 overflow-hidden'}`}>
+        <p 
+          ref={descriptionRef}
+          className={`text-xs text-text-secondary leading-tight transition-all ${
+            isHovered && isTruncated ? 'line-clamp-none overflow-visible' : 'line-clamp-3 overflow-hidden'
+          }`}
+        >
           {description}
         </p>
       </div>
