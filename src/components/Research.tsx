@@ -23,7 +23,6 @@ export const Research: React.FC = () => {
             pdfUrl={item.pdfUrl}
             githubUrl={item.githubUrl}
             link={item.link}
-            isPublished={item.isPublished}
           />
         ))}
       </div>
