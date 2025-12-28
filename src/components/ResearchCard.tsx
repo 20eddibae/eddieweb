@@ -20,8 +20,7 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({
   technologies,
   pdfUrl,
   githubUrl,
-  link,
-  isPublished
+  link
 }) => {
   const url = link || pdfUrl || githubUrl;
 
