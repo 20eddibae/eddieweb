@@ -37,8 +37,7 @@ export const Hero: React.FC = () => {
           <img 
             src="/images/profile.png" 
             alt="Eddie Bae" 
-            className="w-32 h-32 object-cover rounded"
-            style={{ maxWidth: '128px', maxHeight: '128px' }}
+            className="w-[166px] h-[166px] object-cover rounded-2xl"
           />
         </div>
       </div>

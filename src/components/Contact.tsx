@@ -6,7 +6,7 @@ export const Contact: React.FC = () => {
       <h2 className="mb-4">Contact</h2>
       <div className="space-y-3 text-base leading-relaxed">
         <p>
-          I am always open to new opportunities so please reach out at email: eddie [at] dartmouth [dot] edu
+          I am always open to new opportunities so please reach out at email: eddie.j.bae.28 [at] dartmouth [dot] edu
         </p>
       </div>
     </section>
