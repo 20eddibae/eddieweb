@@ -18,7 +18,7 @@ export const Education: React.FC = () => {
               </div>
               <div className="text-base text-text-secondary md:text-right">
                 <p>{edu.endDate}</p>
-                {edu.gpa && <p>GPA: {edu.gpa.toFixed(2)}</p>}
+                {edu.gpa && <p>GPA: &gt;3.9</p>}
               </div>
             </div>
             {edu.honors && edu.honors.length > 0 && (
