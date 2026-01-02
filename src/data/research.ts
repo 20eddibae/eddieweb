@@ -28,7 +28,7 @@ export const research: Research[] = [
   {
     id: 'pediatric-migraine',
     title: 'UCI School of Medicine',
-    role: 'Co-author',
+    role: 'Co-First-Author',
     dateRange: '2024',
     description: 'Co-authored paper on pediatric migraine management. Published at 2024 Western Medical Research Conference',
     technologies: ['Meta-analysis', 'Literature Review'],

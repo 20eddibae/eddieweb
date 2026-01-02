@@ -28,7 +28,7 @@ export const experiences: Experience[] = [
     logo: '/images/logos/evergreen.png',
     startDate: 'May 2025',
     endDate: 'Present',
-    description: 'Leading backend development for student-wellness chatbot platform.',
+    description: 'Developed backend with robust security and scalable trigger engine for student-wellness chatbot platform.',
     technologies: ['Node.js', 'TypeScript', 'AdonisJS', 'Dialogflow', 'REST API', 'Microsoft Graph', 'Canvas LMS'],
   },
 ];
