@@ -29,6 +29,6 @@ export const experiences: Experience[] = [
     startDate: 'May 2025',
     endDate: 'Present',
     description: 'Developed backend with robust security and scalable trigger engine for student-wellness chatbot platform.',
-    technologies: ['Node.js', 'TypeScript', 'AdonisJS', 'Dialogflow', 'REST API', 'Microsoft Graph', 'Canvas LMS'],
+    technologies: ['Python', 'Node.js', 'TypeScript', 'AdonisJS', 'Dialogflow', 'REST API', 'Microsoft Graph', 'Canvas LMS'],
   },
 ];

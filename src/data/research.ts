@@ -2,6 +2,14 @@ import { Research } from '../types';
 
 export const research: Research[] = [
   {
+    id: 'song-lab',
+    title: 'Song Lab',
+    role: 'ML Researcher',
+    dateRange: 'Present',
+    description: 'Working on machine learning algorithms for TCR binding specificity and TCR embedding techniques',
+    technologies: ['Python', 'PyTorch', 'Machine Learning', 'TCR'],
+  },
+  {
     id: 'matrix-colab',
     title: 'Matrix CoLab',
     role: 'Research Assistant',
