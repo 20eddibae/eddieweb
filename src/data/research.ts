@@ -32,6 +32,7 @@ export const research: Research[] = [
     dateRange: '6/2025 - 9/2025',
     description: 'Developed 3D algorithms for C-Index calculation and designed U-net vision-language architecture.',
     technologies: ['Python', 'PyTorch', 'MONAI', '3D CNNs'],
+    link: 'https://github.com/20eddibae/C-INDEX-KIDNEY',
   },
   {
     id: 'pediatric-migraine',

@@ -6,6 +6,7 @@ interface ProjectCardProps {
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
+  caseStudyUrl?: string;
   isProduction?: boolean;
 }
 
@@ -15,9 +16,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   technologies,
   githubUrl,
   liveUrl,
+  caseStudyUrl,
   isProduction
 }) => {
-  const url = liveUrl || githubUrl;
+  const url = caseStudyUrl || liveUrl || githubUrl;
   const [isHovered, setIsHovered] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
   const descriptionRef = useRef<HTMLParagraphElement>(null);

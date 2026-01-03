@@ -12,6 +12,17 @@ export const projects: Project[] = [
     isProduction: true,
   },
   {
+    id: 'classical-music-predictor',
+    title: 'Classical Music Predictor',
+    description: 'Statistical regression analysis to classify classical music composers using linear and logistic regression on musical features including pitch, rhythm, and entropy metrics. Implements one-vs-one classification, feature ablation, and ridge regression.',
+    image: '/images/projects/classical-music.jpg',
+    technologies: ['Python', 'Linear Regression', 'Logistic Regression', 'Statistical Analysis'],
+    githubUrl: 'https://github.com/carpetxie/math50-final-project',
+    caseStudyUrl: '/pdfs/classical-music-predictor.pdf',
+    featured: false,
+    isProduction: false,
+  },
+  {
     id: 'lab-copilot',
     title: 'LabCopilot – AI Laboratory Assistant',
     description: 'Full-stack AI Lab Assistant with LangChain and GPT-4 integration.',

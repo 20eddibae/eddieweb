@@ -20,6 +20,7 @@ export const Projects: React.FC = () => {
             technologies={project.technologies}
             githubUrl={project.githubUrl}
             liveUrl={project.liveUrl}
+            caseStudyUrl={project.caseStudyUrl}
             isProduction={project.isProduction}
           />
         ))}
