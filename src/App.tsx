@@ -7,6 +7,7 @@ import { Research } from './components/Research';
 import { Hobbies } from './components/Hobbies';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { Analytics } from '@vercel/analytics/react';
 import './styles/globals.css';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
