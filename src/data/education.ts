@@ -20,7 +20,7 @@ export const education: Education[] = [
       'General Chemistry',
       'Linear Models',
       'Discrete Math in Computer Science*',
-      'Machine Learning and Statistics*',
+      'Computer Architecture*',
     ],
     honors: [],
     logo: '/images/logos/dartmouth.png',
