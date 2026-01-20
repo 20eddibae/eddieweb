@@ -12,6 +12,16 @@ export const projects: Project[] = [
     isProduction: true,
   },
   {
+    id: 'barnacle-identification',
+    title: 'Barnacle Segmentation',
+    description: 'Two approaches to segmenting barnacles: direct pipeline using OpenCV tools for manual segmentation and U-Net deep learning segmentation using existing architectures with custom data creation for training.',
+    image: '/images/projects/barnacle-identification.jpg',
+    technologies: ['Python', 'OpenCV', 'PyTorch', 'U-Net', 'Deep Learning', 'Image Segmentation'],
+    githubUrl: 'https://github.com/20eddibae/BarnacleIdentification',
+    featured: false,
+    isProduction: false,
+  },
+  {
     id: 'classical-music-predictor',
     title: 'Classical Music Predictor',
     description: 'Statistical regression analysis to classify classical music composers using linear and logistic regression on musical features including pitch, rhythm, and entropy metrics. Implements one-vs-one classification, feature ablation, and ridge regression.',

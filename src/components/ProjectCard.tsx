@@ -47,12 +47,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs sm:text-sm font-bold text-black hover:underline decoration-2 underline-offset-2 transition-all line-clamp-2"
+            className="text-xs sm:text-sm font-bold text-[#000000] hover:underline decoration-2 underline-offset-2 transition-all line-clamp-2 hover:opacity-100"
+            style={{ color: '#000000' }}
           >
             {title}
           </a>
         ) : (
-          <h3 className="text-xs sm:text-sm font-bold text-black line-clamp-2">{title}</h3>
+          <h3 className="text-xs sm:text-sm font-bold text-[#000000] line-clamp-2" style={{ color: '#000000' }}>{title}</h3>
         )}
         
         {isProduction && (
