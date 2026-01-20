@@ -1,110 +1,155 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-import { useScrollPosition } from '../hooks/useScrollPosition';
-
-const navItems = [
-  { name: 'About', href: '#about' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Education', href: '#education' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
-];
+import React, { useState, useEffect, useMemo } from 'react';
 
 export const Navigation: React.FC = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { isScrolled } = useScrollPosition();
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
-  const handleNavClick = (href: string) => {
-    setIsMobileMenuOpen(false);
-    const element = document.querySelector(href);
+  const navItems = useMemo(() => [
+    { id: 'about', label: 'About' },
+    { id: 'education', label: 'Education' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'research', label: 'Research' },
+    { id: 'hobbies', label: 'Hobbies' },
+    { id: 'contact', label: 'Contact' },
+  ], []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+      
+      // Update active section based on scroll position
+      const sections = navItems.map(item => {
+        const element = document.getElementById(item.id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return {
+            id: item.id,
+            top: rect.top,
+            bottom: rect.bottom,
+          };
+        }
+        return null;
+      }).filter((section): section is { id: string; top: number; bottom: number } => section !== null);
+
+      const currentSection = sections.find(
+        (section) => section.top <= 100 && section.bottom >= 100
+      ) || sections[0];
+
+      if (currentSection) {
+        setActiveSection(currentSection.id);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [navItems]);
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const offset = 80; // Account for fixed navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
     }
   };
 
   return (
-    <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background-secondary/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
+        isScrolled
+          ? 'bg-background-primary/95 backdrop-blur-sm border-b border-border shadow-sm'
+          : 'bg-background-primary'
       }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.3 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <motion.a
-            href="#"
+      <div className="content-container">
+        <div className="flex items-center justify-between py-4">
+          <a
+            href="#main-content"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="text-xl font-semibold text-text-accent"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="text-base font-bold text-text-primary no-underline hover:opacity-80 transition-opacity"
           >
             Eddie Bae
-          </motion.a>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          </a>
+          
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
-              <motion.a
-                key={item.name}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(item.href);
-                }}
-                className="text-sm font-medium text-text-secondary hover:text-text-accent transition-colors"
-                whileHover={{ y: -2 }}
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                onClick={(e) => handleClick(e, item.id)}
+                className={`text-sm font-normal text-text-primary no-underline transition-opacity hover:opacity-80 ${
+                  activeSection === item.id ? 'opacity-100' : 'opacity-70'
+                }`}
               >
-                {item.name}
-              </motion.a>
+                {item.label}
+              </a>
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-text-primary"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden text-text-primary"
             aria-label="Toggle menu"
+            onClick={() => {
+              const menu = document.getElementById('mobile-menu');
+              if (menu) {
+                menu.classList.toggle('hidden');
+              }
+            }}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
           </button>
         </div>
-      </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            className="md:hidden bg-background-secondary border-t border-border"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <div className="px-4 py-4 space-y-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(item.href);
-                  }}
-                  className="block text-base font-medium text-text-secondary hover:text-text-accent transition-colors"
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.nav>
+        {/* Mobile menu */}
+        <div
+          id="mobile-menu"
+          className="hidden md:hidden pb-4 border-t border-border mt-2 pt-4"
+        >
+          <div className="flex flex-col gap-3">
+            {navItems.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                onClick={(e) => {
+                  handleClick(e, item.id);
+                  const menu = document.getElementById('mobile-menu');
+                  if (menu) {
+                    menu.classList.add('hidden');
+                  }
+                }}
+                className={`text-sm font-normal text-text-primary no-underline transition-opacity hover:opacity-80 ${
+                  activeSection === item.id ? 'opacity-100' : 'opacity-70'
+                }`}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 };
-

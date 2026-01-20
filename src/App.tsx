@@ -1,3 +1,4 @@
+import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Experience } from './components/Experience';
@@ -13,10 +14,11 @@ import './styles/globals.css';
 function App() {
   return (
     <div className="min-h-screen">
+      <Navigation />
       <a href="#main-content" className="skip-to-content">
         Skip to content
       </a>
-      <main id="main-content">
+      <main id="main-content" className="pt-20">
         <Hero />
         <About />
         <Education />

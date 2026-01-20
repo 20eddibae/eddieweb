@@ -7,7 +7,7 @@ export const research: Research[] = [
     role: 'ML Researcher',
     dateRange: 'Present',
     description: 'Working on machine learning algorithms for TCR binding specificity and TCR embedding techniques',
-    technologies: ['Python', 'PyTorch', 'Machine Learning', 'TCR'],
+    technologies: ['Python', 'PyTorch', 'Machine Learning'],
   },
   {
     id: 'matrix-colab',
@@ -49,7 +49,7 @@ export const research: Research[] = [
     role: 'Principal Investigator',
     dateRange: '2021 - 2024',
     description: 'Published deep learning research on breath sound analysis. Poster presentation as BioGENEius 2023 Finalist',
-    technologies: ['TensorFlow', 'CNN', 'Deep Learning'],
+    technologies: ['Python', 'TensorFlow', 'CNN', 'Deep Learning'],
     link: 'https://doi.org/10.59720/22-004',
   },
 ];
