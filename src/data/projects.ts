@@ -12,6 +12,16 @@ export const projects: Project[] = [
     isProduction: true,
   },
   {
+    id: 'flight-advisor',
+    title: 'FlightAdvisor (Skyris)',
+    description: 'YC Full Stack Hackathon project (competed with 100 teams chosen from thousands). Intelligent flight planning tool that uses AI reasoning to analyze airspace restrictions, weather conditions, and navigation waypoints to recommend optimal flight paths with transparent explanations. Mapbox, A* pathfinding, and Gemini API.',
+    image: '/images/projects/flight-advisor.jpg',
+    technologies: ['Next.js 14', 'TypeScript', 'Mapbox GL JS', 'Google Gemini API', 'shadcn/ui', 'Turf.js'],
+    githubUrl: 'https://github.com/20eddibae/FlightAdvisor',
+    featured: true,
+    isProduction: false,
+  },
+  {
     id: 'barnacle-identification',
     title: 'Barnacle Segmentation',
     description: 'Two approaches to segmenting barnacles: direct pipeline using OpenCV tools for manual segmentation and U-Net deep learning segmentation using existing architectures with custom data creation for training.',
