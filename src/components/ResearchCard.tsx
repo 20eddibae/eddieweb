@@ -39,10 +39,12 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({
 
   return (
     <div 
-      className={`group bg-white border border-border rounded-xl p-2 sm:p-2.5 md:p-3 transition-all duration-200 hover:shadow-lg hover:-translate-y-1 flex flex-col aspect-square h-full w-full ${
-        isHovered && isTruncated ? 'z-50 bg-gray-50 shadow-2xl overflow-visible' : 'z-0 overflow-hidden'
+      className={`group bg-white border border-border rounded-xl p-2 sm:p-2.5 md:p-3 flex flex-col h-full w-full ${
+        isHovered && isTruncated ? 'z-50 bg-gray-50 shadow-2xl overflow-visible aspect-auto min-h-[200px] sm:min-h-[220px]' : 'z-0 overflow-hidden aspect-square transition-[box-shadow,transform] duration-200 hover:shadow-lg hover:-translate-y-1'
       }`}
       style={{ position: 'relative' }}
+      onMouseEnter={() => isTruncated && setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="flex items-center gap-2 mb-1">
         {url ? (
@@ -68,15 +70,11 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({
         <p>{dateRange}</p>
       </div>
 
-      <div 
-        className="mb-2 flex-grow"
-        onMouseEnter={() => isTruncated && setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+      <div className={`mb-2 flex-grow min-h-0 ${isHovered && isTruncated ? 'min-h-fit' : ''}`}>
         <p 
           ref={descriptionRef}
-          className={`text-[10px] sm:text-xs text-text-secondary leading-tight transition-all ${
-            isHovered && isTruncated ? 'line-clamp-none overflow-visible' : 'line-clamp-2 sm:line-clamp-3 overflow-hidden'
+          className={`text-[10px] sm:text-xs text-text-secondary leading-tight ${
+            isHovered && isTruncated ? 'line-clamp-6 overflow-visible' : 'line-clamp-2 sm:line-clamp-3 overflow-hidden'
           }`}
         >
           {description}

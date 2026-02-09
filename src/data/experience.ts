@@ -27,7 +27,7 @@ export const experiences: Experience[] = [
     role: 'Backend Software Developer',
     logo: '/images/logos/evergreen.png',
     startDate: 'May 2025',
-    endDate: 'Present',
+    endDate: 'January 2026',
     description: 'Developed backend with robust security and scalable trigger engine for student-wellness chatbot platform.',
     technologies: ['Python', 'Node.js', 'TypeScript', 'AdonisJS', 'Dialogflow', 'REST API', 'Microsoft Graph', 'Canvas LMS'],
   },

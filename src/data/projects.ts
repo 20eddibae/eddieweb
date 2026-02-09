@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     id: 'drug-identification',
     title: 'Drug Identification Platform',
-    description: 'ML platform for computational drug discovery using KG embeddings and GNNs. Processes PrimeKG to predict drug-target interactions.',
+    description: 'ML platform for drug discovery using KG embeddings and GNNs. Processes PrimeKG to predict drug-target interactions.',
     image: '/images/projects/drug-identification.jpg',
     technologies: ['PyTorch', 'Knowledge Graphs'],
     githubUrl: 'https://github.com/20eddibae',
@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     id: 'flight-advisor',
     title: 'FlightAdvisor (Skyris)',
-    description: 'YC Full Stack Hackathon project (competed with 100 teams chosen from thousands). Intelligent flight planning tool that uses AI reasoning to analyze airspace restrictions, weather conditions, and navigation waypoints to recommend optimal flight paths with transparent explanations. Mapbox, A* pathfinding, and Gemini API.',
+    description: 'YC Hackathon (100 teams from thousands). Flight planning with AI reasoning, airspace/weather analysis, optimal routes. Mapbox, A* pathfinding, Gemini API.',
     image: '/images/projects/flight-advisor.jpg',
     technologies: ['Next.js 14', 'TypeScript', 'Mapbox GL JS', 'Google Gemini API', 'shadcn/ui', 'Turf.js'],
     githubUrl: 'https://github.com/20eddibae/FlightAdvisor',
@@ -24,7 +24,7 @@ export const projects: Project[] = [
   {
     id: 'barnacle-identification',
     title: 'Barnacle Segmentation',
-    description: 'Two approaches to segmenting barnacles: direct pipeline using OpenCV tools for manual segmentation and U-Net deep learning segmentation using existing architectures with custom data creation for training.',
+    description: 'Two approaches: OpenCV pipeline for direct segmentation and U-Net deep learning with custom data creation.',
     image: '/images/projects/barnacle-identification.jpg',
     technologies: ['Python', 'OpenCV', 'PyTorch', 'U-Net', 'Deep Learning', 'Image Segmentation'],
     githubUrl: 'https://github.com/20eddibae/BarnacleIdentification',
@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     id: 'classical-music-predictor',
     title: 'Classical Music Predictor',
-    description: 'Statistical regression analysis to classify classical music composers using linear and logistic regression on musical features including pitch, rhythm, and entropy metrics. Implements one-vs-one classification, feature ablation, and ridge regression.',
+    description: 'Regression analysis to classify composers using pitch, rhythm, entropy. One-vs-one classification, feature ablation, ridge regression.',
     image: '/images/projects/classical-music.jpg',
     technologies: ['Python', 'Linear Regression', 'Logistic Regression', 'Statistical Analysis'],
     githubUrl: 'https://github.com/carpetxie/math50-final-project',
