@@ -7,7 +7,6 @@ export const education: Education[] = [
     degree: 'Bachelor of Arts',
     major: 'Computer Science and Mathematics',
     startDate: '2024',
-    endDate: '2027 (expected)',
     gpa: 3.92,
     honors: [],
     logo: '/images/logos/dartmouth.png',

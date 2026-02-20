@@ -45,7 +45,7 @@ export interface Education {
   minor?: string;
   gpa?: number;
   startDate: string;
-  endDate: string;
+  endDate?: string;
   coursework?: string[];
   honors?: string[];
   logo: string;
