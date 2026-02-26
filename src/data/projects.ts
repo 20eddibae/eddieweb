@@ -43,17 +43,6 @@ export const projects: Project[] = [
     isProduction: false,
   },
   {
-    id: 'lab-copilot',
-    title: 'LabCopilot – AI Laboratory Assistant',
-    description: 'Full-stack AI Lab Assistant with LangChain and GPT-4 integration.',
-    image: '/images/projects/labcopilot.jpg',
-    technologies: ['Next.js 15', 'TypeScript', 'OpenAI GPT-4', 'LangChain', 'Redux'],
-    liveUrl: 'https://lab-copilot-zeta.vercel.app',
-    githubUrl: 'https://github.com/20eddibae',
-    featured: true,
-    isProduction: false,
-  },
-  {
     id: 'nuggets-game',
     title: 'Nuggets Game',
     description: 'Multiplayer game where players explore rooms searching for gold nuggets. CS50 final project with server-client architecture.',
