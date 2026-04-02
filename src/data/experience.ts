@@ -7,7 +7,7 @@ export const experiences: Experience[] = [
     role: 'Software Engineer (Contract)',
     logo: '/images/logos/downtobid.png',
     startDate: 'September 2025',
-    endDate: 'Present',
+    endDate: 'March 2026',
     description: 'Building Graph RAG chatbot for semantic search across construction plan blocks.',
     technologies: ['TypeScript', 'Next.js', 'PostgreSQL', 'pgvector', 'Supabase', 'Graph RAG', 'GPT-4'],
   },

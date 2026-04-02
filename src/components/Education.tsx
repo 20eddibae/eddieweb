@@ -18,12 +18,16 @@ export const Education: React.FC = () => {
               </div>
               <div className="text-base text-text-secondary md:text-right">
                 {edu.endDate && <p>{edu.endDate}</p>}
-                {edu.gpa && <p>GPA: &gt;3.9</p>}
               </div>
             </div>
             {edu.honors && edu.honors.length > 0 && (
               <p className="text-base text-text-secondary">
                 Honors: {edu.honors.join(', ')}
+              </p>
+            )}
+            {edu.coursework && edu.coursework.length > 0 && (
+              <p className="text-base text-text-secondary">
+                Relevant Courses: {edu.coursework.join(', ')}
               </p>
             )}
           </div>

@@ -7,7 +7,7 @@ export const projects: Project[] = [
     description: 'ML platform for drug discovery using KG embeddings and GNNs. Processes PrimeKG to predict drug-target interactions.',
     image: '/images/projects/drug-identification.jpg',
     technologies: ['PyTorch', 'Knowledge Graphs'],
-    githubUrl: 'https://github.com/20eddibae',
+    githubUrl: 'https://github.com/20eddibae/DrugTargetIdentification',
     featured: true,
     isProduction: true,
   },
