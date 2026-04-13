@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
+import { Github } from 'lucide-react';
 import { sortTechnologies, getTechnologyColor, getTechnologyTextColor } from '../utils/technologyColors';
 
 interface ResearchCardProps {
@@ -46,23 +47,30 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({
       onMouseEnter={() => isTruncated && setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="flex items-center gap-2 mb-1">
-        {url ? (
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs sm:text-sm font-bold text-[#000000] hover:underline decoration-2 underline-offset-2 transition-all line-clamp-2 hover:opacity-100"
-            style={{ color: '#000000' }}
-          >
-            {title}
-          </a>
-        ) : (
-          <h3 className="text-xs sm:text-sm font-bold text-[#000000] line-clamp-2" style={{ color: '#000000' }}>{title}</h3>
-        )}
-        {dateRange.includes('Present') && (
-          <span className="w-1.5 h-1.5 bg-green-500 rounded-full flex-shrink-0 animate-pulse" title="Current research" aria-label="Current research" />
-        )}
+      <div className="mb-1">
+        <span className="text-xs sm:text-sm font-bold leading-tight">
+          {url ? (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#000000] hover:underline decoration-2 underline-offset-2 transition-all"
+              style={{ color: '#000000' }}
+            >
+              {title}
+            </a>
+          ) : (
+            <span className="text-[#000000]" style={{ color: '#000000' }}>{title}</span>
+          )}
+          {githubUrl && (
+            <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="inline-flex align-middle ml-1 text-black hover:opacity-60 transition-opacity" aria-label="GitHub repository">
+              <Github size={16} />
+            </a>
+          )}
+          {dateRange.includes('Present') && (
+            <span className="inline-block align-middle ml-1 w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" title="Current research" aria-label="Current research" />
+          )}
+        </span>
       </div>
 
       <div className="text-[10px] sm:text-xs text-text-secondary italic mb-1">

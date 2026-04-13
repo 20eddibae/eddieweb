@@ -2,6 +2,17 @@ import { Project } from '../types';
 
 export const projects: Project[] = [
   {
+    id: 'lattice-bio',
+    title: 'LatticeBio',
+    description: 'Autonomous virtual wet lab platform. Cyclic multi-agent FSM with LLM-as-a-judge for autonomous bio experiment orchestration and subgraph extraction from EBI BioStudies.',
+    image: '/images/projects/lattice-bio.jpg',
+    technologies: ['LangGraph', 'FastAPI', 'Next.js', 'Llama-3.1', 'AlphaFold', 'Ollama'],
+    githubUrl: 'https://github.com/20eddibae/LatticeBiology',
+    liveUrl: 'https://lattice-biology.vercel.app/lab',
+    featured: true,
+    isProduction: true,
+  },
+  {
     id: 'drug-identification',
     title: 'Drug Identification Platform',
     description: 'ML platform for drug discovery using KG embeddings and GNNs. Processes PrimeKG to predict drug-target interactions.',
