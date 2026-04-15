@@ -9,14 +9,7 @@ export const About: React.FC = () => {
           AI SWE and Research @ Downtobid (YC 19) working on Graph RAG chatbots and context window research. 
         </p>
         <p>
-          At Dartmouth, doing ML research in Biomedical Sciences Dpt. and ML/stats research with public health team. 
-          Also doing backend systems for Evergreen AI's mental health platform.
-        </p>
-        <p>
-          I'm particularly interested in the intersection of AI and healthcare. 
-        </p>
-        <p>
-          My background is mostly in LLM applications and ML research so please reach out if my experience matches what you are looking for. 
+          Passionate about AI driven research and deep tech. Currently interested in causality, representation learning, and agent orchestration. Happy to discuss more through email!
         </p>
       </div>
     </section>
