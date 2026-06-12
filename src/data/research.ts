@@ -24,6 +24,7 @@ export const research: Research[] = [
     dateRange: '5/2025-11/2025',
     description: 'Developed deep learning pipelines for gigapath transformer fine-tuning',
     technologies: ['Python', 'PyTorch', 'MONAI', 'Deep Learning'],
+    githubUrl: 'https://github.com/20eddibae/projecthassan',
   },
   {
     id: 'usc-radiomics',

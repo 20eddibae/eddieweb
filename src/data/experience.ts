@@ -6,7 +6,7 @@ export const experiences: Experience[] = [
     company: 'IBM',
     role: 'AI/ML Engineering Intern',
     logo: '/images/logos/ibm.png',
-    startDate: 'April 2026',
+    startDate: '',
     endDate: 'Present',
     description: 'Incoming Summer 2026 at Silicon Valley Labs- Research engineering on watsonx, working on post-training and inference optimization on large speech models.',
     technologies: ['Python', 'PyTorch', 'watsonx', 'Speech Models', 'Inference Optimization'],

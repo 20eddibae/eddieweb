@@ -27,7 +27,11 @@ export const Experience: React.FC = () => {
                 </div>
                 <p className="text-base font-normal">{exp.role}</p>
               </div>
-              <p className="text-base text-text-secondary md:text-right">{exp.startDate} - {exp.endDate}</p>
+              <p className="text-base text-text-secondary md:text-right">
+                {exp.endDate === 'Present' && !exp.startDate
+                  ? 'Present'
+                  : `${exp.startDate} - ${exp.endDate}`}
+              </p>
             </div>
             <p className="text-base leading-relaxed">{exp.description}</p>
             {exp.technologies && exp.technologies.length > 0 && (
