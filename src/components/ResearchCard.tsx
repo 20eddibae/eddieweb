@@ -67,7 +67,7 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({
       </div>
 
       <div className="mb-2 flex-1 min-h-0 overflow-hidden">
-        <p className="text-[10px] sm:text-xs text-text-secondary leading-tight line-clamp-2 sm:line-clamp-3">
+        <p className="text-[10px] sm:text-xs text-text-secondary leading-snug line-clamp-4 sm:line-clamp-5">
           {description}
         </p>
       </div>

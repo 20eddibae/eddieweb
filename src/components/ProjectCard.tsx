@@ -59,7 +59,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       <div className="mb-2 flex-1 min-h-0 overflow-hidden">
-        <p className="text-[10px] sm:text-xs text-text-secondary leading-tight line-clamp-3 sm:line-clamp-4">
+        <p className="text-[10px] sm:text-xs text-text-secondary leading-snug line-clamp-5 sm:line-clamp-6">
           {description}
         </p>
       </div>
