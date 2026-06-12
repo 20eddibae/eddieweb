@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     id: 'sparse-autoencoder-interp',
     title: 'Stochastic Conversation Features (SCF)',
-    description: 'Mechanistic interpretability project treating human-AI conversations as stochastic processes in sparse autoencoder feature space. Four probability experiments on SAE trajectories plus generative MCMC for synthetic conversations.',
+    description: 'Mechanistic interpretability treating human-AI conversations as stochastic processes in sparse autoencoder feature space, with probability experiments and generative MCMC.',
     image: '/images/projects/sparse-autoencoder-interp.jpg',
     technologies: ['Python', 'PyTorch', 'Sparse Autoencoders', 'Mechanistic Interpretability', 'Markov Chains', 'MCMC'],
     githubUrl: 'https://github.com/20eddibae/SparseAutoEncoderInterp',
@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     id: 'lattice-bio',
     title: 'LatticeBio',
-    description: 'Autonomous virtual wet lab platform. Cyclic multi-agent FSM with LLM-as-a-judge for autonomous bio experiment orchestration and subgraph extraction from EBI BioStudies.',
+    description: 'Autonomous virtual wet lab. Cyclic multi-agent FSM with LLM-as-a-judge for bio experiment orchestration and subgraph extraction from EBI BioStudies.',
     image: '/images/projects/lattice-bio.jpg',
     technologies: ['LangGraph', 'FastAPI', 'Next.js', 'Llama-3.1', 'AlphaFold', 'Ollama'],
     githubUrl: 'https://github.com/20eddibae/LatticeBiology',
@@ -25,7 +25,7 @@ export const projects: Project[] = [
   {
     id: 'causal-clinical',
     title: 'CausalClinical',
-    description: 'Causal digital twins for target trial emulation in rare diseases. Generalized counterfactual engine built on structural causal models with do-calculus identifiability, PROCOVA adjustment, and FDA-ready SDTM output.',
+    description: 'Causal digital twins for target trial emulation in rare diseases. Counterfactual engine on structural causal models with do-calculus identifiability and PROCOVA adjustment.',
     image: '/images/projects/causal-clinical.jpg',
     technologies: ['Python', 'Causal Inference', 'Structural Causal Models', 'Do-Calculus', 'Clinical Trials'],
     githubUrl: 'https://github.com/20eddibae/CausalClinical',
@@ -36,7 +36,7 @@ export const projects: Project[] = [
   {
     id: 'flight-advisor',
     title: 'FlightAdvisor (Skyris)',
-    description: 'YC Hackathon (100 teams from thousands). Flight planning with AI reasoning, airspace/weather analysis, optimal routes. Mapbox, A* pathfinding, Gemini API.',
+    description: 'YC Hackathon project. Flight planning with AI reasoning, airspace and weather analysis, and optimal route pathfinding.',
     image: '/images/projects/flight-advisor.jpg',
     technologies: ['Next.js 14', 'TypeScript', 'Mapbox GL JS', 'Google Gemini API', 'shadcn/ui', 'Turf.js'],
     githubUrl: 'https://github.com/20eddibae/FlightAdvisor',
@@ -56,7 +56,7 @@ export const projects: Project[] = [
   {
     id: 'classical-music-predictor',
     title: 'Classical Music Predictor',
-    description: 'Regression analysis to classify composers using pitch, rhythm, entropy. One-vs-one classification, feature ablation, ridge regression.',
+    description: 'Regression analysis to classify composers using pitch, rhythm, and entropy with one-vs-one classification and feature ablation.',
     image: '/images/projects/classical-music.jpg',
     technologies: ['Python', 'Linear Regression', 'Logistic Regression', 'Statistical Analysis'],
     githubUrl: 'https://github.com/carpetxie/math50-final-project',
@@ -77,7 +77,7 @@ export const projects: Project[] = [
   {
     id: 'web-crawler',
     title: 'Tiny Search Engine',
-    description: 'Web crawler, indexer, and querier implementing a complete search engine. CS50 project with inverted index and query processing.',
+    description: 'Web crawler, indexer, and querier implementing a complete search engine with an inverted index. CS50 project.',
     image: '/images/projects/webcrawler.jpg',
     technologies: ['C', 'Shell', 'Makefile'],
     githubUrl: 'https://github.com/20eddibae/WebCrawler',

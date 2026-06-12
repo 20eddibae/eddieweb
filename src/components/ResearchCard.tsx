@@ -31,10 +31,9 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({
     () => sortTechnologies(technologies).slice(0, MAX_TECH),
     [technologies]
   );
-  const extraTech = technologies.length - sortedTechnologies.length;
 
   return (
-    <div className="group bg-white border border-border rounded-xl p-2 sm:p-2.5 md:p-3 flex flex-col h-full w-full overflow-hidden aspect-square transition-shadow duration-200 hover:shadow-lg">
+    <div className="group bg-white border border-border rounded-xl p-2 sm:p-2.5 md:p-3 flex flex-col h-full w-full overflow-hidden aspect-[4/5] transition-shadow duration-200 hover:shadow-lg">
       <div className="mb-1">
         <span className="text-xs sm:text-sm font-bold leading-tight">
           {url ? (
@@ -81,11 +80,6 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({
             {tech}
           </span>
         ))}
-        {extraTech > 0 && (
-          <span className="text-[8px] sm:text-[10px] font-mono text-text-secondary px-1 py-0.5">
-            +{extraTech}
-          </span>
-        )}
       </div>
     </div>
   );
