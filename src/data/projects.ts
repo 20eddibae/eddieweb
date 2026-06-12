@@ -2,6 +2,16 @@ import { Project } from '../types';
 
 export const projects: Project[] = [
   {
+    id: 'sparse-autoencoder-interp',
+    title: 'Stochastic Conversation Features (SCF)',
+    description: 'Mechanistic interpretability project treating human-AI conversations as stochastic processes in sparse autoencoder feature space. Four probability experiments on SAE trajectories plus generative MCMC for synthetic conversations.',
+    image: '/images/projects/sparse-autoencoder-interp.jpg',
+    technologies: ['Python', 'PyTorch', 'Sparse Autoencoders', 'Mechanistic Interpretability', 'Markov Chains', 'MCMC'],
+    githubUrl: 'https://github.com/20eddibae/SparseAutoEncoderInterp',
+    featured: true,
+    isProduction: true,
+  },
+  {
     id: 'lattice-bio',
     title: 'LatticeBio',
     description: 'Autonomous virtual wet lab platform. Cyclic multi-agent FSM with LLM-as-a-judge for autonomous bio experiment orchestration and subgraph extraction from EBI BioStudies.',
