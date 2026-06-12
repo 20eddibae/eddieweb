@@ -26,10 +26,15 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({
 }) => {
   const url = link || pdfUrl || githubUrl;
 
-  const sortedTechnologies = useMemo(() => sortTechnologies(technologies), [technologies]);
+  const MAX_TECH = 4;
+  const sortedTechnologies = useMemo(
+    () => sortTechnologies(technologies).slice(0, MAX_TECH),
+    [technologies]
+  );
+  const extraTech = technologies.length - sortedTechnologies.length;
 
   return (
-    <div className="group bg-white border border-border rounded-xl p-2 sm:p-2.5 md:p-3 flex flex-col h-full w-full overflow-hidden aspect-square transition-[box-shadow,transform] duration-200 hover:shadow-lg hover:-translate-y-1">
+    <div className="group bg-white border border-border rounded-xl p-2 sm:p-2.5 md:p-3 flex flex-col h-full w-full overflow-hidden aspect-square transition-shadow duration-200 hover:shadow-lg">
       <div className="mb-1">
         <span className="text-xs sm:text-sm font-bold leading-tight">
           {url ? (
@@ -61,13 +66,13 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({
         <p>{dateRange}</p>
       </div>
 
-      <div className="mb-2 flex-grow min-h-0 overflow-hidden">
-        <p className="text-[10px] sm:text-xs text-text-secondary leading-tight line-clamp-3 sm:line-clamp-4">
+      <div className="mb-2 flex-1 min-h-0 overflow-hidden">
+        <p className="text-[10px] sm:text-xs text-text-secondary leading-tight line-clamp-2 sm:line-clamp-3">
           {description}
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-1 mt-auto">
+      <div className="flex flex-wrap gap-1 mt-auto flex-shrink-0">
         {sortedTechnologies.map((tech) => (
           <span
             key={tech}
@@ -76,6 +81,11 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({
             {tech}
           </span>
         ))}
+        {extraTech > 0 && (
+          <span className="text-[8px] sm:text-[10px] font-mono text-text-secondary px-1 py-0.5">
+            +{extraTech}
+          </span>
+        )}
       </div>
     </div>
   );
