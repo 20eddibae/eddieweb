@@ -2,6 +2,16 @@ import { Experience } from '../types';
 
 export const experiences: Experience[] = [
   {
+    id: '0',
+    company: 'IBM',
+    role: 'AI/ML Engineering Intern',
+    logo: '/images/logos/ibm.png',
+    startDate: 'April 2026',
+    endDate: 'Present',
+    description: 'Incoming Summer 2026 at Silicon Valley Labs- Research engineering on watsonx, working on post-training and inference optimization on large speech models.',
+    technologies: ['Python', 'PyTorch', 'watsonx', 'Speech Models', 'Inference Optimization'],
+  },
+  {
     id: '1',
     company: 'Downtobid (YC S19)',
     role: 'Software Engineer (Contract)',

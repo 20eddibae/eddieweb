@@ -10,7 +10,13 @@ export const Experience: React.FC = () => {
         {experiences.map((exp) => (
           <div key={exp.id} className="space-y-1">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-1">
-              <div>
+              <div className="flex gap-3">
+                <img
+                  src={exp.logo}
+                  alt={`${exp.company} logo`}
+                  className="w-10 h-10 object-contain flex-shrink-0 mt-0.5"
+                />
+                <div>
                 <div className="flex items-center gap-2">
                   <h3 className="text-lg font-semibold">{exp.company}</h3>
                   {exp.link && (
@@ -26,6 +32,7 @@ export const Experience: React.FC = () => {
                   )}
                 </div>
                 <p className="text-base font-normal">{exp.role}</p>
+                </div>
               </div>
               <p className="text-base text-text-secondary md:text-right">{exp.startDate} - {exp.endDate}</p>
             </div>
