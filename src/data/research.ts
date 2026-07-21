@@ -13,7 +13,7 @@ export const research: Research[] = [
     id: 'matrix-colab',
     title: 'Matrix CoLab',
     role: 'Research Assistant',
-    dateRange: '7/2025 - Present',
+    dateRange: '7/2025 - 2/2026',
     description: 'Statistical modeling of socioeconomic indicators. Current machine learning research on blue book analysis',
     technologies: ['R', 'Statistical Modeling'],
   },

@@ -6,6 +6,7 @@ interface ProjectCardProps {
   title: string;
   description: string;
   technologies: string[];
+  award?: string;
   githubUrl?: string;
   liveUrl?: string;
   caseStudyUrl?: string;
@@ -16,6 +17,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   technologies,
+  award,
   githubUrl,
   liveUrl,
   caseStudyUrl,
@@ -56,6 +58,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           )}
         </span>
       </div>
+
+      {award && (
+        <div className="mb-1.5">
+          <span className="inline-flex rounded-full border border-amber-300 bg-amber-50 px-1.5 py-0.5 text-[8px] sm:text-[9px] font-semibold uppercase tracking-wide text-amber-800">
+            {award}
+          </span>
+        </div>
+      )}
 
       <div className="mb-2 flex-1 min-h-0 overflow-hidden">
         <p className="text-[10px] sm:text-xs text-text-secondary leading-snug line-clamp-6 sm:line-clamp-7">

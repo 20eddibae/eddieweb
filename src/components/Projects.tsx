@@ -18,6 +18,7 @@ export const Projects: React.FC = () => {
             title={project.title}
             description={project.description}
             technologies={project.technologies}
+            award={project.award}
             githubUrl={project.githubUrl}
             liveUrl={project.liveUrl}
             caseStudyUrl={project.caseStudyUrl}

@@ -2,9 +2,20 @@ import { Project } from '../types';
 
 export const projects: Project[] = [
   {
+    id: 'kscope',
+    title: 'KScope',
+    description: 'Analyzes pathology foundation model activations and uses causal interventions to test which concepts drive each prediction.',
+    image: '/images/projects/kscope.jpg',
+    technologies: ['Python', 'PyTorch', 'Mechanistic Interpretability', 'Pathology Foundation Models', 'MCP'],
+    award: 'Owkin Hackathon Winner',
+    githubUrl: 'https://github.com/bmosk54/K-scope',
+    featured: true,
+    isProduction: false,
+  },
+  {
     id: 'sparse-autoencoder-interp',
     title: 'Stochastic Conversation Features (SCF)',
-    description: 'Mechanistic interpretability treating human-AI conversations as stochastic processes in sparse autoencoder feature space, with probability experiments and generative MCMC.',
+    description: 'Models human-AI conversations as stochastic processes in sparse autoencoder feature space using generative MCMC.',
     image: '/images/projects/sparse-autoencoder-interp.jpg',
     technologies: ['Python', 'PyTorch', 'Sparse Autoencoders', 'Mechanistic Interpretability', 'Markov Chains', 'MCMC'],
     githubUrl: 'https://github.com/20eddibae/SparseAutoEncoderInterp',

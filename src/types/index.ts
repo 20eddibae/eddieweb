@@ -17,6 +17,7 @@ export interface Project {
   description: string;
   image: string;
   technologies: string[];
+  award?: string;
   githubUrl?: string;
   liveUrl?: string;
   caseStudyUrl?: string;
