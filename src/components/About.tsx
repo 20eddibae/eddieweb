@@ -6,7 +6,7 @@ export const About: React.FC = () => {
       <h2 className="mb-4">About</h2>
       <div className="space-y-3 text-base leading-relaxed">
         <p>
-          Passionate about AI driven research and deep tech. Currently interested in causality, representation learning, interpretability, and agent orchestration. Currently working on genomics seq2func. Happy to discuss more through email!
+          Working on AI in genomics.
         </p>
       </div>
     </section>

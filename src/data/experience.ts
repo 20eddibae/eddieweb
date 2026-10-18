@@ -4,7 +4,7 @@ export const experiences: Experience[] = [
   {
     id: '0',
     company: 'IBM',
-    role: 'AI/ML Engineering',
+    role: 'AI/ML',
     logo: '/images/logos/ibm.png',
     startDate: '',
     endDate: 'Present',
