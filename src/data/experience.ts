@@ -4,7 +4,7 @@ export const experiences: Experience[] = [
   {
     id: '0',
     company: 'IBM',
-    role: 'AI/ML Engineering Intern',
+    role: 'AI/ML Engineering',
     logo: '/images/logos/ibm.png',
     startDate: '',
     endDate: 'Present',
@@ -14,7 +14,7 @@ export const experiences: Experience[] = [
   {
     id: '1',
     company: 'Downtobid (YC S19)',
-    role: 'Software Engineer (Contract)',
+    role: 'Software Engineer',
     logo: '/images/logos/downtobid.png',
     startDate: 'September 2025',
     endDate: 'March 2026',
@@ -24,7 +24,7 @@ export const experiences: Experience[] = [
   {
     id: '2',
     company: 'GENIE AI: Property-Plus Team',
-    role: 'AI Software Engineering Intern',
+    role: 'AI Software Engineering',
     logo: '/images/logos/genie.png',
     startDate: 'July 2025',
     endDate: 'September 2025',

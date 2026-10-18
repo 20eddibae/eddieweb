@@ -25,11 +25,6 @@ export const Education: React.FC = () => {
                 Honors: {edu.honors.join(', ')}
               </p>
             )}
-            {edu.coursework && edu.coursework.length > 0 && (
-              <p className="text-base text-text-secondary">
-                Relevant Courses: {edu.coursework.join(', ')}
-              </p>
-            )}
           </div>
         ))}
       </div>

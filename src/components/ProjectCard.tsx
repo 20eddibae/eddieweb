@@ -10,7 +10,6 @@ interface ProjectCardProps {
   githubUrl?: string;
   liveUrl?: string;
   caseStudyUrl?: string;
-  isProduction?: boolean;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -21,7 +20,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   githubUrl,
   liveUrl,
   caseStudyUrl,
-  isProduction
 }) => {
   const url = caseStudyUrl || liveUrl || githubUrl;
 
@@ -52,9 +50,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="inline-flex align-middle ml-1 text-black hover:opacity-60 transition-opacity" aria-label="GitHub repository">
               <Github size={16} />
             </a>
-          )}
-          {isProduction && (
-            <span className="inline-block align-middle ml-1 w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" title="Live" aria-label="Production app" />
           )}
         </span>
       </div>
